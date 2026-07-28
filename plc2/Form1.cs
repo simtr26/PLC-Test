@@ -12,12 +12,15 @@ using S7.Net.Protocol;
 using S7.Net.Types;
 using S7.Net;
 
+
+
 namespace plc2
 {
     public partial class Form1 : Form
     {
-        public static Plc plc = new Plc(CpuType.S71200, "192.168.0.1", 0, 1);
 
+        public static Plc plc = new Plc(CpuType.S71200, "192.168.0.1", 0, 1);
+        private System.Windows.Forms.Timer speedReadTimer;
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +28,11 @@ namespace plc2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            // Timer ayarlarını form açıldığında yap ve başlat
+            speedReadTimer = new System.Windows.Forms.Timer();
+            speedReadTimer.Interval = 500; // Her yarım saniyede bir okur
+            speedReadTimer.Tick += SpeedReadTimer_Tick;
+            speedReadTimer.Start(); // DÜZELTME 1: Timer hiç başlatılmıyordu, bu satır eksikti
         }
 
         private void butt_connect_Click(object sender, EventArgs e)
@@ -74,7 +81,7 @@ namespace plc2
                 {
                     plc.Open();
                 }
-                plc.WriteBit(DataType.DataBlock, 1, 0, 0, false); 
+                plc.WriteBit(DataType.DataBlock, 1, 0, 0, false);
                 plc.WriteBit(DataType.DataBlock, 1, 0, 1, true);
             }
             catch (Exception ex)
@@ -88,16 +95,20 @@ namespace plc2
         {
             try
             {
-                if (plc.IsConnected && short.TryParse(txtSpeedRef.Text, out short targetSpeed))
+                if (!plc.IsConnected)
                 {
-                    // Int değerini 2 baytlık diziye çevirip doğrudan DB2, Offset 0'a yazıyoruz
-                    byte[] bytes = S7.Net.Types.Int.ToByteArray(targetSpeed);
-                    plc.WriteBytes(DataType.DataBlock, 2, 0, bytes);
+                    MessageBox.Show("Bağlantı yok, önce PLC'ye bağlanın, Kaptan!");
+                    return;
                 }
-                else
+
+                if (!short.TryParse(txtSpeedAct.Text, out short targetSpeed))
                 {
-                    MessageBox.Show("Bağlantı kopuk veya geçersiz değer girdin, Kaptan!");
+                    MessageBox.Show("Geçersiz hız değeri, lütfen sayısal bir değer girin, Kaptan!");
+                    return;
                 }
+
+                // S7.Net ile doğrudan DB2, Offset 0 adresine Int türünde yazma
+                plc.Write("DB2.DBW0", targetSpeed);
             }
             catch (Exception ex)
             {
@@ -118,7 +129,7 @@ namespace plc2
                     short actualSpeed = S7.Net.Types.Int.FromByteArray(bytes);
 
                     // Anlık hızı arayüzdeki TextBox'a yansıt
-                    txtSpeedAct.Text = actualSpeed.ToString();
+                    txtSpeedRef.Text = actualSpeed.ToString();
                 }
             }
             catch

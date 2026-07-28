@@ -31,8 +31,8 @@
             this.butt_connect = new System.Windows.Forms.Button();
             this.butt_open = new System.Windows.Forms.Button();
             this.butt_close = new System.Windows.Forms.Button();
-            this.txtSpeedAct = new System.Windows.Forms.TextBox();
             this.txtSpeedRef = new System.Windows.Forms.TextBox();
+            this.txtSpeedAct = new System.Windows.Forms.TextBox();
             this.butt_SetSpeed = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -70,24 +70,24 @@
             this.butt_close.UseVisualStyleBackColor = true;
             this.butt_close.Click += new System.EventHandler(this.butt_close_Click);
             // 
-            // txtSpeedAct
-            // 
-            this.txtSpeedAct.Location = new System.Drawing.Point(13, 218);
-            this.txtSpeedAct.Multiline = true;
-            this.txtSpeedAct.Name = "txtSpeedAct";
-            this.txtSpeedAct.Size = new System.Drawing.Size(186, 31);
-            this.txtSpeedAct.TabIndex = 3;
-            this.txtSpeedAct.TextChanged += new System.EventHandler(this.txtSpeedAct_TextChanged);
-            // 
             // txtSpeedRef
             // 
-            this.txtSpeedRef.Location = new System.Drawing.Point(212, 261);
+            this.txtSpeedRef.Location = new System.Drawing.Point(13, 218);
             this.txtSpeedRef.Multiline = true;
             this.txtSpeedRef.Name = "txtSpeedRef";
             this.txtSpeedRef.ReadOnly = true;
-            this.txtSpeedRef.Size = new System.Drawing.Size(187, 32);
-            this.txtSpeedRef.TabIndex = 4;
-            this.txtSpeedRef.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtSpeedRef.Size = new System.Drawing.Size(186, 31);
+            this.txtSpeedRef.TabIndex = 3;
+            this.txtSpeedRef.TextChanged += new System.EventHandler(this.txtSpeedAct_TextChanged);
+            // 
+            // txtSpeedAct
+            // 
+            this.txtSpeedAct.Location = new System.Drawing.Point(212, 261);
+            this.txtSpeedAct.Multiline = true;
+            this.txtSpeedAct.Name = "txtSpeedAct";
+            this.txtSpeedAct.Size = new System.Drawing.Size(187, 32);
+            this.txtSpeedAct.TabIndex = 4;
+            this.txtSpeedAct.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // butt_SetSpeed
             // 
@@ -117,8 +117,8 @@
             this.ClientSize = new System.Drawing.Size(412, 307);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butt_SetSpeed);
-            this.Controls.Add(this.txtSpeedRef);
             this.Controls.Add(this.txtSpeedAct);
+            this.Controls.Add(this.txtSpeedRef);
             this.Controls.Add(this.butt_close);
             this.Controls.Add(this.butt_open);
             this.Controls.Add(this.butt_connect);
@@ -137,8 +137,8 @@
         private System.Windows.Forms.Button butt_connect;
         private System.Windows.Forms.Button butt_open;
         private System.Windows.Forms.Button butt_close;
-        private System.Windows.Forms.TextBox txtSpeedAct;
         private System.Windows.Forms.TextBox txtSpeedRef;
+        private System.Windows.Forms.TextBox txtSpeedAct;
         private System.Windows.Forms.Button butt_SetSpeed;
         private System.Windows.Forms.Label label1;
     }
