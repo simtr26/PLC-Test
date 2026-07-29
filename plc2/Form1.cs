@@ -97,13 +97,13 @@ namespace plc2
             {
                 if (!plc.IsConnected)
                 {
-                    MessageBox.Show("Bağlantı yok, önce PLC'ye bağlanın, Kaptan!");
+                    MessageBox.Show("Bağlantı yok, önce PLC'ye bağlanın");
                     return;
                 }
 
                 if (!short.TryParse(txtSpeedAct.Text, out short targetSpeed))
                 {
-                    MessageBox.Show("Geçersiz hız değeri, lütfen sayısal bir değer girin, Kaptan!");
+                    MessageBox.Show("Geçersiz hız değeri, lütfen sayısal bir değer girin");
                     return;
                 }
 
@@ -150,7 +150,27 @@ namespace plc2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (!plc.IsConnected)
+                {
+                    MessageBox.Show("Bağlantı yok, önce PLC'ye bağlanın");
+                    return;
+                }
 
+                if (!short.TryParse(txtSpeedAct.Text, out short targetSpeed))
+                {
+                    MessageBox.Show("Geçersiz hız değeri, lütfen sayısal bir değer girin");
+                    return;
+                }
+
+                // S7.Net ile doğrudan DB2, Offset 0 adresine Int türünde yazma
+                plc.Write("DB2.DBW0", targetSpeed);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hız yazma hatası: " + ex.Message);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -72,26 +72,25 @@
             // 
             // txtSpeedRef
             // 
-            this.txtSpeedRef.Location = new System.Drawing.Point(13, 218);
+            this.txtSpeedRef.Location = new System.Drawing.Point(214, 255);
             this.txtSpeedRef.Multiline = true;
             this.txtSpeedRef.Name = "txtSpeedRef";
             this.txtSpeedRef.ReadOnly = true;
-            this.txtSpeedRef.Size = new System.Drawing.Size(186, 31);
+            this.txtSpeedRef.Size = new System.Drawing.Size(187, 39);
             this.txtSpeedRef.TabIndex = 3;
             this.txtSpeedRef.TextChanged += new System.EventHandler(this.txtSpeedAct_TextChanged);
             // 
             // txtSpeedAct
             // 
-            this.txtSpeedAct.Location = new System.Drawing.Point(212, 261);
-            this.txtSpeedAct.Multiline = true;
+            this.txtSpeedAct.Location = new System.Drawing.Point(12, 225);
             this.txtSpeedAct.Name = "txtSpeedAct";
-            this.txtSpeedAct.Size = new System.Drawing.Size(187, 32);
+            this.txtSpeedAct.Size = new System.Drawing.Size(187, 20);
             this.txtSpeedAct.TabIndex = 4;
             this.txtSpeedAct.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // butt_SetSpeed
             // 
-            this.butt_SetSpeed.Location = new System.Drawing.Point(12, 256);
+            this.butt_SetSpeed.Location = new System.Drawing.Point(12, 255);
             this.butt_SetSpeed.Name = "butt_SetSpeed";
             this.butt_SetSpeed.Size = new System.Drawing.Size(187, 40);
             this.butt_SetSpeed.TabIndex = 5;
@@ -103,7 +102,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(220, 225);
+            this.label1.Location = new System.Drawing.Point(225, 225);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 18);
             this.label1.TabIndex = 6;
