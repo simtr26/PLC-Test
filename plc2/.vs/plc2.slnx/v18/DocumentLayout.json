@@ -1,38 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\source\\repos\\plc2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|c:\\users\\emres\\desktop\\workspace\\plc2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|c:\\users\\emres\\desktop\\workspace\\plc2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|c:\\users\\lenovo\\source\\repos\\plc2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|C:\\Users\\emres\\Desktop\\Workspace\\plc2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|C:\\Users\\LENOVO\\source\\repos\\plc2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|c:\\users\\emres\\desktop\\workspace\\plc2\\profilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:profilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|c:\\users\\emres\\desktop\\workspace\\plc2\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|c:\\users\\emres\\desktop\\workspace\\plc2\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|c:\\users\\emres\\desktop\\workspace\\plc2\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|C:\\Users\\LENOVO\\source\\repos\\plc2\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|c:\\users\\emres\\desktop\\workspace\\plc2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|C:\\Users\\LENOVO\\source\\repos\\plc2\\profilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:profilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|C:\\Users\\LENOVO\\source\\repos\\plc2\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|C:\\Users\\LENOVO\\source\\repos\\plc2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|C:\\Users\\LENOVO\\source\\repos\\plc2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|C:\\Users\\LENOVO\\source\\repos\\plc2\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2C5E4B-AC3C-41D7-9DD0-999BE610B845}|plc2.csproj|solutionrelative:userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +42,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 198,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form1.cs",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form1.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Form1.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-29T06:52:25.145Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form3.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form3.cs",
               "RelativeDocumentMoniker": "Form3.cs",
-              "ToolTip": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form3.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form3.cs",
               "RelativeToolTip": "Form3.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwEAAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAcwEAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-30T12:00:27.83Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ProfileManager.cs",
-              "DocumentMoniker": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\ProfileManager.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\plc2\\ProfileManager.cs",
               "RelativeDocumentMoniker": "ProfileManager.cs",
-              "ToolTip": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\ProfileManager.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\plc2\\ProfileManager.cs",
               "RelativeToolTip": "ProfileManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T13:22:11.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-30T13:22:11.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "UserProfile.cs",
-              "DocumentMoniker": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\UserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\plc2\\UserProfile.cs",
               "RelativeDocumentMoniker": "UserProfile.cs",
-              "ToolTip": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\UserProfile.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\plc2\\UserProfile.cs",
               "RelativeToolTip": "UserProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T13:21:18.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-30T13:21:18.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form3.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form3.cs",
+              "DocumentIndex": 2,
+              "Title": "Form3.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form3.cs",
               "RelativeDocumentMoniker": "Form3.cs",
-              "ToolTip": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form3.cs [Design]",
-              "RelativeToolTip": "Form3.cs [Design]",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form3.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Form3.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T11:53:34.13Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form2.cs",
-              "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form2.cs [Design]",
-              "RelativeToolTip": "Form2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T11:53:25.455Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-07-30T11:53:34.13Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form2.cs",
+              "Title": "Form2.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form2.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form2.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Form2.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T11:53:25.455Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form2.cs",
               "RelativeToolTip": "Form2.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwCoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAANoAAAAAAAAAAAAowOMAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-30T13:26:09.496Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\emres\\Desktop\\Workspace\\plc2\\Form1.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\plc2\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAwwJgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T13:42:20.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-27T13:42:20.047Z"
             }
           ]
         }

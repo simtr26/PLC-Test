@@ -1,4 +1,5 @@
-﻿using System;
+﻿using S7.Net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,8 @@ namespace plc2
     public partial class Form2 : Form
     {
         private List<UserProfile> _profileList = new List<UserProfile>();
-
+        public static Plc plc = new Plc(CpuType.S71200, "192.168.0.1", 0, 1);
+        private System.Windows.Forms.Timer speedReadTimer;
         public static string direction = null;
 
         public Form2()
@@ -126,21 +128,210 @@ namespace plc2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panel3.Visible = true;
-            label12.Text = ProfileName;
-            if (Direction == "İLERİ")
+            // Değerleri kutulardan alıp başlangıç ayarlarını yapıyoruz
+           
+            if (listBox1.SelectedItem is UserProfile selectedProfile)
             {
-                radioButton3.Checked = true;
+                // Panellerin görünürlüğünü ayarlama
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = true;
+
+                // JSON'dan yuklenip ListBox'ta secilen profil verilerini doldurma
+                label12.Text = selectedProfile.ProfileName;
+
+                if (selectedProfile.Direction == "İLERİ")
+                {
+                    radioButton3.Checked = true;
+                    try
+                    {
+                        if (!plc.IsConnected)
+                            plc.Open();
+
+                        plc.Write("DB1.DBX0.1", false);
+
+
+
+                        plc.Write("DB3.DBX0.2", true);  // geris = 1
+                        Task.Delay(100);          // PLC'nin okuması için 100ms bekle
+                        plc.Write("DB3.DBX0.2", false); // geris = 0 (Butondan elini çekti gibi)
+                        plc.Write("DB3.DBX0.1", false);
+                        plc.Write("DB3.DBX0.0", true);
+                        label3.Text = "İLERİ";
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("hata" + ex.Message);
+                    }
+                }
+                else
+                {
+                    radioButton4.Checked = true;
+                }
+
+
+                textBox10.Text = selectedProfile.MaxRpm.ToString();
+                textBox9.Text = selectedProfile.MaxRpmDurationSec.ToString();
+                textBox8.Text = selectedProfile.AccelerationTimeSec.ToString();
+                textBox7.Text = selectedProfile.StoppingTimeSec.ToString();
+
+                hedefHiz = selectedProfile.MaxRpm;
+                adimSayisi = (int)selectedProfile.AccelerationTimeSec;
+
+                // Her tick'te ne kadar dartacağını hesaplıyoruz
+                artisMiktari = hedefHiz / adimSayisi;
+                // Sayaçları sıfırla ve Timer'ı başlat
+                mevcutHiz = 0;
+                mevcutAdim = 0;
+
+                hizlanma.Start();
             }
             else
             {
-                radioButton4.Checked = true;
+                MessageBox.Show("Lütfen önce listeden bir profil seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+        
+        }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+            speedReadTimer = new System.Windows.Forms.Timer();
+            speedReadTimer.Interval = 500; // Her yarım saniyede bir okur
+          
+            speedReadTimer.Start();
+
+            try
+            {
+                if (!plc.IsConnected)
+                {
+                    plc.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("PLC'ye bağlanılamadı: " + ex.Message, "Bağlantı Hatası", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        double mevcutHiz = 0;
+        double hedefHiz = 0;
+        double adimSayisi = 0;
+        double mevcutAdim = 0;
+        double artisMiktari = 0;
+
+        double donmesuresi = 0;
+        double azalisMiktari = 0;
+        double adimSayisi2 = 0;
+
+        private void hizlanma_Tick(object sender, EventArgs e) //SIKINTILI KOD !!!!!!!!!!
+        {
+             
+            azalisMiktari = hedefHiz / double.Parse(textBox7.Text);
+            if (!plc.IsConnected)
+{
+    hizlanma.Stop();
+    MessageBox.Show("Bağlantı yok, önce PLC'ye bağlanın.");
+    return;
+}
+
+// 2. İvmelenme Süreci
+if (mevcutAdim < adimSayisi)
+{
+    mevcutAdim++;
+    mevcutHiz += artisMiktari;
+
+    // Hedef hızı aşmamak için güvenlik kontrolü
+    if (mevcutHiz > hedefHiz) 
+    {
+        mevcutHiz = hedefHiz;
+    }
+
+    try
+    {
+        // PLC'ye güncel hızı yazıyoruz
+        // NOT: WORD (DBW) veri tipi kullanıyorsan mevcutHiz değerinin 'short' veya 'ushort' olduğundan emin ol.
+        plc.Write("DB2.DBW0", Convert.ToInt16(mevcutHiz));
+    }
+    catch (Exception ex)
+    {
+        hizlanma.Stop();
+        MessageBox.Show("Hız yazma hatası: " + ex.Message);
+    }
+}
+
+
+            if (!plc.IsConnected)
+            {
+                hizlanma.Stop();
+                MessageBox.Show("Bağlantı yok, önce PLC'ye bağlanın.");
+                return;
+            }
+
+            // 0'a bölünme hatasını (Infinity/NaN) önlemek için güvenlik kontrolü
+            double durmaSuresi = StoppingTimeSec > 0 ? StoppingTimeSec : 1;
+
+            // Timer her çalıştığında düşecek hız miktarı (Interval hesabı dahil)
+            double timerSaniyeCinsinden = durma.Interval / 1000.0;
+            double adimSayisiDurma = durmaSuresi / timerSaniyeCinsinden;
+           
+
+            if (mevcutAdim > 0 && mevcutHiz > 0)
+            {
+                mevcutAdim--;
+                mevcutHiz -= azalisMiktari;
+
+                // GÜVENLİK: Hız 0'ın altına düşerse veya belirsiz (NaN/Infinity) olursa 0'a sabitle
+                if (mevcutHiz < 0 || double.IsNaN(mevcutHiz) || double.IsInfinity(mevcutHiz))
+                {
+                    mevcutHiz = 0;
+                }
+
+                try
+                {
+                    // Güvenli dönüşüm
+                    short yazilacakHiz = Convert.ToInt16(Math.Round(mevcutHiz));
+                    plc.Write("DB2.DBW0", yazilacakHiz);
+                }
+                catch (Exception ex)
+                {
+                   hizlanma.Stop();
+                    MessageBox.Show("Hız yazma hatası: " + ex.Message);
+                }
+            }
+            else
+            {
+                // Yavaşlama bitti, hızı kesin olarak 0 yap ve timer'ı durdur
+                mevcutHiz = 0;
+                try
+                {
+                    plc.Write("DB2.DBW0", (short)0);
+                }
+                catch {
+                    hizlanma.Stop();
+                }
+
+               
+            }
+        }
+      
+        private void donmet_Tick(object sender, EventArgs e)
+        {
+           
+                
+                
             
-                textBox10.Text = MaxRpm.ToString();
-                textBox9.Text = MaxRpmDurationSec.ToString();
-                textBox8.Text = AccelerationTimeSec.ToString();
-                textBox7.Text = StoppingTimeSec.ToString();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void durma_Tick(object sender, EventArgs e)
+        {
+        
         }
     }
 }

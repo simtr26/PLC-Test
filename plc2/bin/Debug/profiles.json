@@ -14,5 +14,37 @@
     "MaxRpmDurationSec": 124,
     "AccelerationTimeSec": 312,
     "StoppingTimeSec": 13
+  },
+  {
+    "ProfileName": "aa",
+    "Direction": "\u0130LER\u0130",
+    "MaxRpm": 67,
+    "MaxRpmDurationSec": 10,
+    "AccelerationTimeSec": 22,
+    "StoppingTimeSec": 30
+  },
+  {
+    "ProfileName": "yeni",
+    "Direction": "GER\u0130",
+    "MaxRpm": 100,
+    "MaxRpmDurationSec": 10,
+    "AccelerationTimeSec": 20,
+    "StoppingTimeSec": 20
+  },
+  {
+    "ProfileName": "yenivd",
+    "Direction": "GER\u0130",
+    "MaxRpm": 100,
+    "MaxRpmDurationSec": 10,
+    "AccelerationTimeSec": 2,
+    "StoppingTimeSec": 20
+  },
+  {
+    "ProfileName": "yenivd",
+    "Direction": "GER\u0130",
+    "MaxRpm": 100,
+    "MaxRpmDurationSec": 10,
+    "AccelerationTimeSec": 10,
+    "StoppingTimeSec": 20
   }
 ]
