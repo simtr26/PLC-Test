@@ -1,0 +1,18 @@
+[
+  {
+    "ProfileName": "boyko",
+    "Direction": "\u0130LER\u0130",
+    "MaxRpm": 213,
+    "MaxRpmDurationSec": 123,
+    "AccelerationTimeSec": 41,
+    "StoppingTimeSec": 123
+  },
+  {
+    "ProfileName": "olmazbu",
+    "Direction": "GER\u0130",
+    "MaxRpm": 212,
+    "MaxRpmDurationSec": 124,
+    "AccelerationTimeSec": 312,
+    "StoppingTimeSec": 13
+  }
+]

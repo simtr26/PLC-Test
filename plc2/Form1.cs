@@ -38,23 +38,7 @@ namespace plc2
 
         private void butt_connect_Click(object sender, EventArgs e)
         {
-            try
-            {
-                plc.Open();
-
-                if (plc.IsConnected)
-                    MessageBox.Show("PLC bağlantısı başarılı!");
-                else
-                    MessageBox.Show("Bağlantı kurulamadı.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hata: " + ex.Message);
-            }
-            finally
-            {
-
-            }
+            
         }
 
         private void butt_open_Click(object sender, EventArgs e)
